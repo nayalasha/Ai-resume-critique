@@ -1,12 +1,21 @@
-from flask import Flask
+import customtkinter as ctk
 
-app = Flask(__name__)
+window = ctk.CTk()
+window.geometry("1920x1080")
+window.title("AI Resume Critique")
 
-@app.route("/")
-def home():
-    return "AI Resume Critique App"
+# Background color
+window.configure(bg= "#f0f0f0")
 
-if __name__ == "__main__":
-    app.run(debug=True)
 
-    print("MY NAME IS JASON")
+#Test label
+label = ctk.CTkLabel(window,
+                      text="AI Resume Critique",
+                      font=ctk.
+                      CTkFont
+                      (family="Arial", size=50,
+                       weight="bold"),
+                       )
+label.pack(pady=20)
+
+window.mainloop()
